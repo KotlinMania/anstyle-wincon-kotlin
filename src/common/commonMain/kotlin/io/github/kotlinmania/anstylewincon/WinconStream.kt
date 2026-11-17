@@ -2,10 +2,10 @@
 package io.github.kotlinmania.anstylewincon
 
 import ai.solace.tui.anstyle.AnsiColor
-import io.github.kotlinmania.anstylewincon.ansi.writeColored as writeAnsiColored
 import io.github.kotlinmania.io.Buffer
 import io.github.kotlinmania.io.Sink
 import io.github.kotlinmania.io.readString
+import io.github.kotlinmania.anstylewincon.ansi.writeColored as writeAnsiColored
 
 /**
  * Extend byte sinks and standard console streams with wincon styling.

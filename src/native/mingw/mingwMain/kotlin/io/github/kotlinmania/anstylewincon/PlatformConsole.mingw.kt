@@ -17,7 +17,10 @@ import io.github.kotlinmania.windowssys.windows.win32.system.console.SetConsoleT
 
 private var cachedStdoutInitialColors: WinconColorsOutcome? = null
 private var cachedStderrInitialColors: WinconColorsOutcome? = null
-private val cachedStderrFile by lazy { io.github.kotlinmania.libc.windows.fdopen(2, "wb") }
+private val cachedStderrFile by lazy {
+    io.github.kotlinmania.libc.windows
+        .fdopen(2, "wb")
+}
 
 internal actual fun platformInitialConsoleColors(isStderr: Boolean): WinconColorsOutcome {
     if (isStderr) {
