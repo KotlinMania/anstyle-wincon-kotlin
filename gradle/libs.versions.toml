@@ -11,6 +11,10 @@ ktlintEngine = "1.8.0"
 kotlinxBenchmark = "0.5.0"
 
 androidxTestRunner = "1.7.0"
+anstyle = "0.1.6"
+kmIo = "0.4.0"
+libc = "0.1.11"
+windowsSys = "0.1.2"
 
 [plugins]
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "androidKmp" }
@@ -29,11 +33,18 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
 collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "collectionsImmutable" }
 kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinxBenchmark" }
+anstyle-kotlin = { module = "io.github.kotlinmania:anstyle-kotlin", version.ref = "anstyle" }
+km-io = { module = "io.github.kotlinmania:km-io", version.ref = "kmIo" }
+libc-kotlin = { module = "io.github.kotlinmania:libc-kotlin", version.ref = "libc" }
+windows-sys-kotlin = { module = "io.github.kotlinmania:windows-sys-kotlin", version.ref = "windowsSys" }
 
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
 
 [bundles]
 anstyle-wincon-commonMain = [
-  "kotlinx-coroutines-core",
-  "collections-immutable",
+  "libc-kotlin",
+]
+anstyle-wincon-commonMainApi = [
+  "anstyle-kotlin",
+  "km-io",
 ]
